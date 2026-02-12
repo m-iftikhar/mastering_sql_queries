@@ -12,3 +12,15 @@ CREATE TABLE users (
 );
 
 SELECT * FROM users;
+
+SELECT * FROM users WHERE gender = "Male";
+SELECT *  FROM users WHERE gender = "Male" and salary = "70000";
+SELECT * FROM users WHERE salary BETWEEN "65000" AND "80000";
+SELECT * FROM users WHERE date_of_birth IS NOT NULL;
+SELECT * FROM users WHERE gender IN ("Male","Female");
+SELECT * FROM users WHERE gender = 'Male' OR gender = 'Other';
+SELECT * FROM users WHERE date_of_birth IS NOT NULL ORDER BY gender DESC LIMIT 10 OFFSET 5;
+
+SELECT *  FROM users WHERE name LIKE '%a';
+SELECT *  FROM users WHERE name LIKE 'A%';
+SELECT *  FROM users WHERE name LIKE '%ar%';
