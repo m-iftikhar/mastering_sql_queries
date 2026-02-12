@@ -13,6 +13,8 @@ CREATE TABLE users (
 
 SELECT * FROM users;
 
+-- where clause examples
+
 SELECT * FROM users WHERE gender = "Male";
 SELECT *  FROM users WHERE gender = "Male" and salary = "70000";
 SELECT * FROM users WHERE salary BETWEEN "65000" AND "80000";
@@ -24,3 +26,11 @@ SELECT * FROM users WHERE date_of_birth IS NOT NULL ORDER BY gender DESC LIMIT 1
 SELECT *  FROM users WHERE name LIKE '%a';
 SELECT *  FROM users WHERE name LIKE 'A%';
 SELECT *  FROM users WHERE name LIKE '%ar%';
+
+-- UPDATE AND DELETE
+
+UPDATE users SET salary = "70000" where id="3";
+DELETE FROM users WHERE id = 3;
+DROP TABLE users;
+DELETE FROM users;
+
