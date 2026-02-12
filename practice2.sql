@@ -61,4 +61,11 @@ FROM users;
 
 SELECT gender ,IF(gender="Female","yes","no") AS is_female FROM users;
 
+-- Transactions and AutoCommit
 
+SET autocommit = 0;
+UPDATE users SET salary = 80000 WHERE id = 5;
+COMMIT;
+ROLLBACK;
+--  Enabling AutoCommit Again
+SET autocommit = 1;
