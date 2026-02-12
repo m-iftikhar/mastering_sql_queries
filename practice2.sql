@@ -34,3 +34,31 @@ DELETE FROM users WHERE id = 3;
 DROP TABLE users;
 DELETE FROM users;
 
+-- sql funtions
+
+SELECT COUNT(*) FROM users;
+SELECT MAX(salary) AS max_salaary , MIN(salary) AS min_salary FROM users;
+SELECT SUM(salary) FROM users;
+SELECT gender ,AVG(salary) AS avrg_salary FROM users GROUP BY gender;
+
+SELECT COUNT(*) FROM users;
+SELECT MAX(salary) AS max_salaary , MIN(salary) AS min_salary FROM users;
+SELECT SUM(salary) FROM users;
+SELECT gender ,AVG(salary) AS avrg_salary FROM users GROUP BY gender;
+
+SELECT name, LENGTH(name) AS name_len FROM users;
+SELECT name, LOWER(name) AS name_lower FROM users;
+SELECT name, 	UPPER(name) AS name_upper FROM users;
+SELECT CONCAT(name, ' <', email, '>') AS user_contact FROM users;
+SELECT NOW();
+SELECT name, DATEDIFF(CURDATE(), date_of_birth) AS days_lived FROM users;
+SELECT id, MOD(id, 2) AS remainder FROM users;
+SELECT salary,
+ ROUND(salary) AS rounded,
+ FLOOR(salary) AS floored,
+ CEIL(salary) AS ceiled
+FROM users;
+
+SELECT gender ,IF(gender="Female","yes","no") AS is_female FROM users;
+
+
