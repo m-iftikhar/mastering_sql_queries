@@ -61,3 +61,11 @@ last_name VARCHAR(100)
 
 
 SELECT * FROM customers AS a INNER JOIN customers AS b ON a.referral_id = b.id;
+
+
+-- view
+
+CREATE VIEW high_salary AS
+ SELECT name ,salary,gender FROM users WHERE salary>70000;
+SELECT * FROM high_salary;
+DROP VIEW high_salary;
