@@ -50,3 +50,14 @@ id INT PRIMARY KEY,
  salary INT
 );
 
+-- self join
+
+CREATE TABLE customers(
+id INT AUTO_INCREMENT PRIMARY KEY,
+first_name VARCHAR(100),
+last_name VARCHAR(100)
+);
+
+
+
+SELECT * FROM customers AS a INNER JOIN customers AS b ON a.referral_id = b.id;
