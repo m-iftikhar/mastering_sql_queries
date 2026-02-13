@@ -27,3 +27,37 @@ INSERT INTO users (name, email, gender, date_of_birth, salary) VALUES
 
 
 -- inseretion data foraddresses
+
+INSERT INTO addresses (user_id, street, city, state, pincode)
+VALUES
+(1, '221B MG Road', 'Mumbai', 'Maharashtra', '400001'),
+(22, '14 Park Street', 'Kolkata', 'West Bengal', '700016'),
+(3, '32 Residency Road', 'Bengaluru', 'Karnataka', '560025'),
+(24, '5 North Usman Road', 'Chennai', 'Tamil Nadu', '600017'),
+(5, '17 Hazratganj', 'Lucknow', 'Uttar Pradesh', '226001'),
+(6, '55 Banjara Hills', 'Hyderabad', 'Telangana', '500034'),
+(7, '88 Connaught Place', 'Delhi', 'Delhi', '110001'),
+(8, '10 MG Marg', 'Dehradun', 'Uttarakhand', '248001'),
+(9, '23 Brigade Road', 'Bengaluru', 'Karnataka', '560025'),
+(10, '45 Marine Drive', 'Mumbai', 'Maharashtra', '400020'),
+(11, '67 Ashoka Road', 'Delhi', 'Delhi', '110001'),
+(12, '89 MG Road', 'Pune', 'Maharashtra', '411001'),
+(13, '12 Brigade Road', 'Bengaluru', 'Karnataka', '560025'),
+(14, '34 Park Street', 'Kolkata', 'West Bengal', '700016'),
+(15, '56 Connaught Place', 'Delhi', 'Delhi', '110001'),
+(16, '78 Marine Drive', 'Mumbai', 'Maharashtra', '400020'),
+(17, '90 MG Marg', 'Dehradun', 'Uttarakhand', '248001'),
+(18, '11 North Usman Road', 'Chennai', 'Tamil Nadu', '600017'),
+(19, '33 Residency Road', 'Bengaluru', 'Karnataka', '560025'),
+(20, '22 Hazratganj', 'Lucknow', 'Uttar Pradesh', '226001');
+
+
+
+
+
+-- insertion data for admin
+INSERT INTO admin_users (id, name, email, gender, date_of_birth, salary) VALUES
+(101, 'Anil Kumar', 'anil@example.com', 'Male', '1985-04-12', 60000),
+(102, 'Pooja Sharma', 'pooja@example.com', 'Female', '1992-09-20', 58000),
+(103, 'Rakesh Yadav', 'rakesh@example.com', 'Male', '1989-11-05', 54000),
+(104, 'Fatima Begum', 'fatima@example.com', 'Female', '1990-06-30', 62000);
