@@ -27,3 +27,26 @@ CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 SELECT users.name, addresses.city FROM users INNER JOIN addresses ON users.id = addresses.user_id;
 SELECT users.name, addresses.city FROM users LEFT JOIN addresses ON users.id = addresses.user_id;
 SELECT users.name, addresses.city FROM users RIGHT JOIN addresses ON users.id = addresses.user_id;
+
+
+-- union & union all
+
+
+SELECT name,email FROM users 
+UNION 
+SELECT name , email FROM admin_users;
+
+SELECT name, 'User' AS role FROM users
+UNION ALL
+SELECT name, 'Admin' AS role FROM admin_users;
+
+
+CREATE TABLE admin_users (
+id INT PRIMARY KEY,
+ name VARCHAR(100),
+ email VARCHAR(100),
+ gender ENUM('Male', 'Female', 'Other'),
+ date_of_birth DATE,
+ salary INT
+);
+
