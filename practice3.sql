@@ -1,0 +1,29 @@
+
+
+-- foreign key 
+
+CREATE TABLE addresses(
+id INT AUTO_INCREMENT PRIMARY KEY,
+user_id INT,
+street VARCHAR(255),
+city VARCHAR(100),
+state VARCHAR(100),
+pincode VARCHAR(10),
+CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+--   ON DELETE SET NULL
+-- -- > Agar user delete hoga,
+-- to address delete nahi hoga —
+-- bas user_id NULL ho jayega.
+
+
+-- ON DELETE RESTRICT
+-- Agar child table mein record exist karta hai,
+-- to parent delete karne hi nahi dega.
+
+-- SQL JOINs in MySQL
+
+SELECT users.name, addresses.city FROM users INNER JOIN addresses ON users.id = addresses.user_id;
+SELECT users.name, addresses.city FROM users LEFT JOIN addresses ON users.id = addresses.user_id;
+SELECT users.name, addresses.city FROM users RIGHT JOIN addresses ON users.id = addresses.user_id;
